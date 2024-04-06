@@ -12,7 +12,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 ![thumbnail.png](docs/Thumbnail.png)
 
-![projeto.png](docs/projeto.png)
+![projeto.png](docs/Projeto.png)
 
 ## 🧪 Como executar
 
