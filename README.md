@@ -11,6 +11,7 @@ O pass.in é uma aplicação web que gerencia participantes de eventos
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/community/file/1356738933008624188)
 
 ![thumbnail.png](docs/Thumbnail.png)
+
 ![projeto.png](docs/projeto.png)
 
 ## 🧪 Como executar
