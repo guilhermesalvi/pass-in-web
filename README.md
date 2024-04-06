@@ -4,7 +4,9 @@
 
 ## 💻 Projeto
 
-O pass.in é uma aplicação web que gerencia participantes de eventos
+O pass.in é uma aplicação web que gerencia participantes de eventos. O projeto foi desenvolvido durante a Next Level Week Unite da Rocketseat.  
+
+A principal funcionalidade é a utilização de __url state__ de forma nativa para que a listagem com filtros seja mantida mesmo após o recarregamento da página.
 
 ## 🔖 Layout
 
