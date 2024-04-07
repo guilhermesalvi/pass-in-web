@@ -28,6 +28,7 @@ interface Attendee {
   email: string
   createdAt: string
   checkedInAt: string | null
+  isChecked: boolean
 }
 
 export function AttendeeList() {
@@ -52,8 +53,6 @@ export function AttendeeList() {
     url.searchParams.set('pageIndex', String(page - 1))
 
     if (search.length > 0) url.searchParams.set('query', search)
-
-    console.log(url.toString())
 
     fetch(url.toString())
       .then((response) => response.json())
@@ -123,12 +122,6 @@ export function AttendeeList() {
       <Table>
         <thead>
           <tr className="border-b border-white/10">
-            <TableHeader style={{ width: 48 }}>
-              <input
-                type="checkbox"
-                className="size-4 rounded border border-white/10 bg-black/20 checked:border-orange-300 checked:checked:border-orange-300 checked:border-opacity-100 checked:bg-orange-300 checked:checked:bg-orange-300 checked:bg-opacity-10 focus:ring-0"
-              />
-            </TableHeader>
             <TableHeader>Código</TableHeader>
             <TableHeader>Participantes</TableHeader>
             <TableHeader>Data de inscrição</TableHeader>
@@ -143,12 +136,6 @@ export function AttendeeList() {
                 key={attendee.id}
                 className="border-b border-white/10 hover:bg-white/5"
               >
-                <TableCell>
-                  <input
-                    type="checkbox"
-                    className="size-4 rounded border border-white/10 bg-black/20 checked:border-orange-300 checked:checked:border-orange-300 checked:border-opacity-100 checked:bg-orange-300 checked:checked:bg-orange-300 checked:bg-opacity-10 focus:ring-0"
-                  />
-                </TableCell>
                 <TableCell>{attendee.id}</TableCell>
                 <TableCell>
                   <div className="flex flex-col gap-1">
@@ -177,7 +164,7 @@ export function AttendeeList() {
         </tbody>
         <tfoot>
           <tr>
-            <TableCell colSpan={3}>
+            <TableCell colSpan={2}>
               Mostrando {attendees.length} de {total} itens
             </TableCell>
             <TableCell colSpan={3} className="text-right">

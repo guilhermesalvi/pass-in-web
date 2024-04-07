@@ -22,7 +22,7 @@ Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
 $ git clone
-$ cd pass.in
+$ cd pass-in-web
 ```
 
 Para iniciá-lo, siga os passos abaixo:
@@ -32,6 +32,8 @@ $ npm install
 
 # Iniciar o projeto
 $ npm run dev:mock
+
+# O servidor inciará em <http://localhost:50792>
 ```
 
 ## 🚀 Tecnologias
